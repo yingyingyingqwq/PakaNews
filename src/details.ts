@@ -22,7 +22,7 @@ async function getArticle(): Promise<Article> {
         if (article.announce_id == id) return article;
     }
 
-    const res = await fetch("https://umapyoi.net/api/v1/news/" + id);
+    const res = await fetch("https://fuwa.yingqwq.cn/api/v1/news/" + id);
     return await res.json();
 }
 
@@ -35,8 +35,8 @@ async function init() {
     label.innerText = article.label_name_en;
 
     postTime.innerText = Utils.formatTimestamp(article.post_at);
-    title.innerText = article.title_english;
-    let messageHTML = article.message_english;
+    title.innerText = article.title_chinese;
+    let messageHTML = article.message_chinese;
     if (article.image && !messageHTML.startsWith("<figure><img")) {
         messageHTML = `<figure><img src="${article.image}"></figure>${messageHTML}`;
     }

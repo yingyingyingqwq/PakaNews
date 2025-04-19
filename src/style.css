@@ -4,9 +4,9 @@
 }
 
 @font-face {
-    font-family: "Open Sans Rodin";
-    src: url("/assets/OpenSansRodin-ExtraBold.woff2") format("woff2"),
-         url("/assets/OpenSansRodin-ExtraBold.ttf") format("truetype");
+    font-family: "Misans Demibold";
+    src: url("/assets/Misans-Demibold.woff2") format("woff2"),
+         url("/assets/Misans-Demibold.ttf") format("truetype");
     font-weight: 800;
 }
 
@@ -19,7 +19,7 @@ body {
     background: #f9f9f9;
     color: #744015;
     font-size: 12px;
-    font-family: 'dynamic_01', 'UMAMUSUME-RodinWanpaku Pro', 'FOT-RodinWanpaku Pro', 'Open Sans Rodin', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'dynamic_01', 'UMAMUSUME-RodinWanpaku Pro', 'FOT-RodinWanpaku Pro', 'Misans Demibold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     font-weight: 800;
     line-height: 1.5;
     -webkit-touch-callout: none;
@@ -253,6 +253,12 @@ body {
 
 .details-page .subheading::before {
     content: "•";
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
 }
 
 #articleMessage {

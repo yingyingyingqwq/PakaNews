@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/src/style.css" />
-    <title>PakaNews</title>
+    <title>FuwaNews</title>
   </head>
   <body>
     <div class="container">
@@ -12,10 +12,13 @@
         <div class="navbar">
           <div class="inner">
             <a id="allTabBtn" role="button" class="nav-btn">
-              <div class="inner">All</div>
+              <div class="inner">全部</div>
             </a>
             <a id="gameTabBtn" role="button" class="nav-btn">
-              <div class="inner">Game</div>
+              <div class="inner">游戏</div>
+            </a>
+            <a id="mediaTabBtn" role="button" class="nav-btn">
+              <div class="inner">多媒体</div>
             </a>
           </div>
         </div>
@@ -23,10 +26,11 @@
           <div id="newsEntries" class="inner"></div>
           <div id="loader">
             <img width="64" height="64" src="/assets/loading.svg">
+            <p class="loading-text">正在拉取翻译中……这可能耗时较长。</p>
           </div>
         </div>
         <div class="footer">
-          News provided by umapyoi.net
+          新闻由 umapyoi.net 与 fuwa.yingqwq.cn 提供
         </div>
       </div>
     </div>

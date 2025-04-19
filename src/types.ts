@@ -8,10 +8,12 @@ export interface Article {
     label_name_en: string,
     message: string,
     message_english: string,
+    message_chinese: string,
     post_at: number,
     post_platform_flag: number,
     row_number: number,
     title: string,
     title_english: string,
+    title_chinese: string,
     update_at?: number
 }

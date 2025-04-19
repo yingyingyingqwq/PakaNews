@@ -5,11 +5,13 @@ import type { Article } from "./types";
 
 const allTabBtn = document.getElementById("allTabBtn")!;
 const gameTabBtn = document.getElementById("gameTabBtn")!;
+const mediaTabBtn = document.getElementById("mediaTabBtn")!;
 const newsEntries = document.getElementById("newsEntries")!;
 
 enum Tab {
     All,
-    Game
+    Game,
+    Media
 }
 
 var currentTab = Tab.All;
@@ -35,11 +37,17 @@ function updateTabBtns() {
             gameTabBtn.classList.add("selected");
             allTabBtn.classList.remove("selected");
             break;
+
+        case Tab.Media:
+            mediaTabBtn.classList.add("selected");
+            allTabBtn.classList.remove("selected");
+            break;
     }
 }
 
 allTabBtn.addEventListener("click", () => onTabClick(Tab.All));
 gameTabBtn.addEventListener("click", () => onTabClick(Tab.Game));
+mediaTabBtn.addEventListener("click", () => onTabClick(Tab.Media));
 
 function appendNewsEntry(article: Article) {
     const entry = document.createElement("a");
@@ -65,13 +73,13 @@ function appendNewsEntry(article: Article) {
     if (article.update_at) {
         const updatedTime = document.createElement("div");
         updatedTime.className = "updated-time";
-        updatedTime.innerText = "【Updated】" + Utils.formatTimestamp(article.update_at);
+        updatedTime.innerText = "【修改】" + Utils.formatTimestamp(article.update_at);
         labelBox.appendChild(updatedTime);
     }
 
     const title = document.createElement("h1");
     title.className = "news-title";
-    title.innerText = article.title_english;
+    title.innerText = article.title_chinese;
     entry.appendChild(title)
 
     if (article.image) {
@@ -115,11 +123,15 @@ async function loadNews(loadMore = false) {
     let endpoint: string;
     switch (currentTab) {
         case Tab.All:
-            endpoint = `https://umapyoi.net/api/v1/news/latest/${POST_COUNT}/${offset}`;
+            endpoint = `https://fuwa.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}`;
             break;
 
         case Tab.Game:
-            endpoint = `https://umapyoi.net/api/v1/news/latest/${POST_COUNT}/${offset}/label/1`;
+            endpoint = `https://fuwa.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}/label/1`;
+            break;
+
+        case Tab.Media:
+            endpoint = `https://fuwa.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}/label/3`;
             break;
     }
 

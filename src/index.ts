@@ -31,16 +31,19 @@ function updateTabBtns() {
         case Tab.All:
             allTabBtn.classList.add("selected");
             gameTabBtn.classList.remove("selected");
+            mediaTabBtn.classList.remove("selected");
             break;
 
         case Tab.Game:
             gameTabBtn.classList.add("selected");
             allTabBtn.classList.remove("selected");
+            mediaTabBtn.classList.remove("selected");
             break;
 
         case Tab.Media:
             mediaTabBtn.classList.add("selected");
             allTabBtn.classList.remove("selected");
+            gameTabBtn.classList.remove("selected");
             break;
     }
 }

@@ -63,7 +63,7 @@ Loader.show();
 init()
 .catch(e => {
     console.error(e);
-    message.innerText = "Failed to load article: " + e;
+    message.innerText = " 无法加载文章: " + e;
 })
 .finally(() => {
     contentsInner.classList.add("show");

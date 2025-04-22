@@ -111,7 +111,7 @@ function appendMoreBtn() {
     newsEntries.appendChild(moreBtn);
 }
 
-const POST_COUNT =  10;
+const POST_COUNT = 15;
 let offset = 0;
 let loading = false;
 async function loadNews(loadMore = false) {

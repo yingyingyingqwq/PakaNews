@@ -102,7 +102,7 @@ function appendNewsEntry(article: Article) {
 function appendMoreBtn() {
     const moreBtn = document.createElement("div");
     moreBtn.className = "news-entry more-btn";
-    moreBtn.innerText = "▼ Load more";
+    moreBtn.innerText = "▼ 继续加载";
     moreBtn.addEventListener("click", () => {
         if (loading) return;
         Unity.call("snd_sfx_UI_Tap_01");
@@ -111,7 +111,7 @@ function appendMoreBtn() {
     newsEntries.appendChild(moreBtn);
 }
 
-const POST_COUNT = 20;
+const POST_COUNT =  10;
 let offset = 0;
 let loading = false;
 async function loadNews(loadMore = false) {

@@ -126,15 +126,15 @@ async function loadNews(loadMore = false) {
     let endpoint: string;
     switch (currentTab) {
         case Tab.All:
-            endpoint = `https://fuwa.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}`;
+            endpoint = `https://newsapi.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}`;
             break;
 
         case Tab.Game:
-            endpoint = `https://fuwa.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}/label/1`;
+            endpoint = `https://newsapi.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}/label/1`;
             break;
 
         case Tab.Media:
-            endpoint = `https://fuwa.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}/label/3`;
+            endpoint = `https://newsapi.yingqwq.cn/api/v1/news/latest/${POST_COUNT}/${offset}/label/3`;
             break;
     }
 

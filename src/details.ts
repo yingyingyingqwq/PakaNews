@@ -22,7 +22,7 @@ async function getArticle(): Promise<Article> {
         if (article.announce_id == id) return article;
     }
 
-    const res = await fetch("https://fuwa.yingqwq.cn/api/v1/news/" + id);
+    const res = await fetch("https://newsapi.yingqwq.cn/api/v1/news/" + id);
     return await res.json();
 }
 

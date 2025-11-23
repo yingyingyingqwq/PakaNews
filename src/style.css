@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "dynamic_01";
-    src: local("Dynamic01.otf"), url("Font/Font/Dynamic01.otf") format("opentype");
-}
-
-@font-face {
     font-family: "Misans Demibold";
     src: url("/assets/Misans-Demibold.woff2") format("woff2"),
          url("/assets/Misans-Demibold.ttf") format("truetype");
@@ -19,7 +14,7 @@ body {
     background: #f9f9f9;
     color: #744015;
     font-size: 12px;
-    font-family: 'dynamic_01', 'UMAMUSUME-RodinWanpaku Pro', 'FOT-RodinWanpaku Pro', 'Misans Demibold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'UMAMUSUME-RodinWanpaku Pro', 'FOT-RodinWanpaku Pro', 'Misans Demibold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     font-weight: 800;
     line-height: 1.5;
     -webkit-touch-callout: none;
